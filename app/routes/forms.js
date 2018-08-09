@@ -78,7 +78,8 @@ function addSubmissionToDB(formName, replyTo, text, sent) {
 // Send mail with text
 function sendMail(markdown, to, replyTo, formName) {
     if (config.allowedTo) {
-        if (!config.allowedTo.includes(to)) {
+        let allowedToArray = config.allowedTo.split(/\s+/);
+        if (!allowedToArray.includes(to)) {
             console.log("Tried to send to %s, but that isn't allowed. Sending to %s instead.", to, config.emailTo);
             to = config.emailTo;
         }

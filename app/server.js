@@ -2,7 +2,7 @@
 const path = require('path');
 const cors = require('cors');
 const express = require('express');
-const errorHandler = require('express-error-handler');
+const errorHandler = require('errorhandler');
 
 const rootDir = path.join(__dirname, '..');
 const adminRouter = require(path.join(rootDir, 'app/routes/admin'));
