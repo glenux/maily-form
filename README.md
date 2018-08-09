@@ -23,6 +23,7 @@ To run the server, you must set a few environment variables from the list below.
 | **`SMTP_HOST`** | required |       - | The SMTP host                          |
 | **`SMTP_PORT`** | required |       - | The SMTP port                          |
 | **`SMTP_SSL`**  | optional | `false` | If the SMTP server uses encryption     |
+| **`SMTP_AUTH`** | optional | `false` | If the SMTP server uses authentication |
 
 ### Parameters that control email headers
 
@@ -47,8 +48,8 @@ If you want to use the admin panel at `/admin`, you have to set this too:
 
 | Name          | Type     | Default value | Usage                           |
 |--------------------|----------|-------------------------------|----------------|
-| **`ADMIN_USERNAME`** | optional |                             - | Admin username |
-| **`ADMIN_PASSWORD`** | optional |                             - | Admin password |
+| **`ADMIN_USER`** | optional |                             - | Admin username |
+| **`ADMIN_PASS`** | optional |                             - | Admin password |
 | **`ADMIN_REALM`**    | optional | `"Maily-Form Administration"` | Admin realm    |
 
 

@@ -8,20 +8,21 @@ if (process.env.NODE_ENV === 'production') {
         database: 'data/submissions.db',
 
         // Admin credentials to access the dashboard
-        adminUsername: process.env.ADMIN_USERNAME || null,
-        adminPassword: process.env.ADMIN_PASSWORD || null,
+        adminUsername: process.env.ADMIN_USER || null,
+        adminPassword: process.env.ADMIN_PASS || null,
         adminRealm: process.env.ADMIN_REALM || 'Maily-Form Administration',
 
         // Parameters to send emails
-        smtpHost: process.env.SMTP_HOST || process.env.EMAIL_HOST || null,
-        smtpPort: process.env.SMTP_PORT || process.env.EMAIL_PORT || null,
-        smtpUser: process.env.SMTP_USER || process.env.EMAIL_USER || null,
-        smtpPass: process.env.SMTP_PASS || process.env.EMAIL_PASS || null,
-        smtpSsl: process.env.SMTP_SSL || process.env.EMAIL_SECURE || false,
+        smtpHost: process.env.SMTP_HOST || null,
+        smtpPort: process.env.SMTP_PORT || null,
+        smtpUser: process.env.SMTP_USER || null,
+        smtpPass: process.env.SMTP_PASS || null,
+        smtpSsl: (process.env.SMTP_SSL === "true") || false,
+        smtpAuth: (process.env.SMTP_AUTH === "true") || false,
 
         // Header content for emails
-        emailFrom: process.env.EMAIL_FROM || process.env.FROM || 'noreply@example.com',
-        emailTo: process.env.EMAIL_TO || process.env.TO || 'noone@example.com',
+        emailFrom: process.env.EMAIL_FROM || 'noreply@example.com',
+        emailTo: process.env.EMAIL_TO || 'noone@example.com',
 
         // Text content for success and error messages
         messageSuccess: process.env.MESSAGE_SUCCESS || 'Thank you for your submission.',
@@ -39,8 +40,8 @@ if (process.env.NODE_ENV === 'production') {
         // Security (or lack-of)
         corsHeader: process.env.CORS_HEADER || '*',
 
-        // Server
-        host: process.env.HOST || '0.0.0.0',
+        // Server (should be secure by default)
+        host: process.env.HOST || '127.0.0.1',
         port: process.env.PORT || 8080
     }
 } else {
@@ -60,6 +61,7 @@ if (process.env.NODE_ENV === 'production') {
         smtpUser: null,
         smtpPass: null,
         smtpSsl: false,
+        smtpAuth: false,
 
         // Header content for emails
         emailFrom: 'noreply@example.com',
@@ -72,14 +74,17 @@ if (process.env.NODE_ENV === 'production') {
         subjectSuccess: 'New submission from __FORM_NAME__',
         subjectError: 'Error in submission from __FORM_NAME__',
 
+        // Allowed recipients
+        allowedTo: false,
+
         // Response format (accepts 'json' or 'html')
         responseFormat: 'html',
-
+       
         // Security (or lack-of)
         corsHeader: '*',
 
         // Server
-        host: '0.0.0.0',
+        host: '127.0.0.1',
         port: 8080
     }
 }

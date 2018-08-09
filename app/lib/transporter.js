@@ -7,13 +7,13 @@ const markdown = require('nodemailer-markdown').markdown;
 const transporterConfig = {
     host: config.smtpHost,
     port: config.smtpPort,
-    secure: (config.smtpSsl === "true"),
-    auth: (config.smtpUser && config.smtpPass ? {
+    secure: config.smtpSsl,
+    auth: (config.smtpAuth && config.smtpUser && config.smtpPass ? {
         user: config.smtpUser,
         pass: config.smtpPass
     } : false),
     tls: {
-        rejectUnauthorized: (config.smtpSsl === "true")
+        rejectUnauthorized: config.smtpSsl
     }
 };
 
