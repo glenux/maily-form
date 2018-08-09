@@ -148,6 +148,10 @@ describe('Forms API', () => {
         });
         */
 
+        it.skip('sanitizes HTML in message and other fields', (done) => {
+            // TODO
+        });
+
         it('blocks email when _t_email is not empty', (done) => {
             let formData = {
                 "_t_email": 'iAmABot'

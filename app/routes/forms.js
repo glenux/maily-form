@@ -3,6 +3,8 @@ const formidable = require('formidable');
 const transporter = require('../lib/transporter');
 const db = require('../lib/database').connect();
 const config = require('../lib/config');
+const sanitizeHtml = require('sanitize-html');
+
 
 /* eslint-disable-next-line new-cap */
 const router = express.Router();
@@ -24,7 +26,10 @@ function processFormFields(req, res) {
     let botTest = true;
     let form = new formidable.IncomingForm();
 
-    form.on('field', (field, value) => {
+    form.on('field', (dirtyField, dirtyValue) => {
+        let field = sanitizeHtml(dirtyField);
+        let value = sanitizeHtml(dirtyValue);
+
         if (field === "_to") to = value;
         else if (field === "_replyTo") replyTo = value;
         else if (field === "_redirectTo") redirectTo = value;
