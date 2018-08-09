@@ -51,7 +51,7 @@ describe('Forms API', () => {
             });
         });
 
-        it('sends email and set properly the _replyTo header (when set)', (done) => {
+        it('sends email and takes _replyTo in account in mail header (when set)', (done) => {
             let formData = {
                 "_replyTo": 'loveIsAll@example.com'
             };

@@ -1,7 +1,7 @@
 
 # Maily Form
 
-![Docker Pulls](https://img.shields.io/docker/pulls/jlelse/maily-form.svg)
+![Travis](https://travis-ci.org/glenux/contrib-maily-form.svg?branch=master) | ![Docker Pulls](https://img.shields.io/docker/pulls/jlelse/maily-form.svg)
 
 *Available on [DockerHub](https://hub.docker.com/r/jlelse/maily-form/)*
 
@@ -52,16 +52,15 @@ If you want to use the admin panel at `/admin`, you have to set this too:
 | **`ADMIN_PASS`** | optional |                             - | Admin password |
 | **`ADMIN_REALM`**    | optional | `"Maily-Form Administration"` | Admin realm    |
 
-
 ## Special form fields
 
-| Name          | Type     | Default value | Usage                           |
-|------------------|----------|---|----------------|
+| Name              | Type     | Default value | Usage                           |
+|-------------------|----------|---|----------------|
 | **`_to`**         | optional | - | Recipient, if `ALLOWED_TO` is set, it must be in that list, hidden |
 | **`_replyTo`**    | optional | - | Email address which should be configured as replyTo, (most probably not hidden)  |
 | **`_redirectTo`** | optional | - | URL to redirect to, hidden |
 | **`_formName`**   | optional | - | Name of the form, hidden  |
-| **`_t_email`**   | optional | - | "Honeypot" field, not hidden, advised (see notice below)  |
+| **`_t_email`**    | optional | - | "Honeypot" field, not hidden, advised (see notice below)  |
 
 You can find a sample in the `form.html` file.
 
