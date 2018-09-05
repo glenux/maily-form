@@ -1,7 +1,7 @@
 
 # Maily Form
 
-![Travis](https://travis-ci.org/glenux/contrib-maily-form.svg?branch=master) | ![Docker Pulls](https://img.shields.io/docker/pulls/jlelse/maily-form.svg)
+![Travis](https://travis-ci.org/jlelse/Maily-Form.svg?branch=master) ![Docker Pulls](https://img.shields.io/docker/pulls/jlelse/maily-form.svg)
 
 *Available on [DockerHub](https://hub.docker.com/r/jlelse/maily-form/)*
 
