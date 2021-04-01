@@ -1,5 +1,5 @@
 
-# Maily Form
+# Maily Form 
 
 ![Travis](https://travis-ci.org/jlelse/Maily-Form.svg?branch=master) ![Docker Pulls](https://img.shields.io/docker/pulls/jlelse/maily-form.svg)
 
