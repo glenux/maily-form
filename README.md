@@ -2,17 +2,16 @@
 ![License GPL3.0](https://img.shields.io/badge/license-GPL3.0-blue.svg)
 [![Donate on patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://patreon.com/glenux)
 
-> :information_source: This project is available on our self-hosted server and
-> uses CodeBerg and GitHub as mirrors. For the latest updates and comprehensive
-> version of our project, please visit our primary repository at:
+> :information_source: This project is hosted on our self-hosted server, with
+> mirrors on CodeBerg and GitHub. For the most complete and up-to-date version
+> of the project, and for contributions, please use the primary repository at:
 > <https://code.apps.glenux.net/glenux/maily-form>.
 
 # Maily Form
 
-This is a self-hosted service you can use to place forms on static sites. It uses [nodemailer](https://nodemailer.com/about/) and you can host it with Docker. 
-
-
-:warning: __It is currently in development and it's not advised to use in production yet.__
+This is a self-hosted service you can use to place forms on static sites. It
+uses [nodemailer](https://nodemailer.com/about/) and you can host it with
+Docker. 
 
 ## Server parameters
 
@@ -20,8 +19,8 @@ To run the server, you must set a few environment variables from the list below.
 
 ### Parameters that control email delivery
 
-| Name          | Type     | Default value | Usage                           |
-|---------------|----------|---------|----------------------------------------|
+| Name            | Type     | Default value | Usage                            |
+|-----------------|----------|---------|----------------------------------------|
 | **`SMTP_USER`** | required |       - | The SMTP user                          |
 | **`SMTP_PASS`** | required |       - | The SMTP password                      |
 | **`SMTP_HOST`** | required |       - | The SMTP host                          |
@@ -31,19 +30,19 @@ To run the server, you must set a few environment variables from the list below.
 
 ### Parameters that control email headers
 
-| Name          | Type     | Default value | Usage                           |
-|----------------|----------|---|--------------------------------------------|
+| Name             | Type     | Default value | Usage                          |
+|------------------|----------|---|--------------------------------------------|
 | **`EMAIL_FROM`** | required | - | The sender (ex: `Forms forms@example.com`) |
 | **`EMAIL_TO`**   | required | - | Default recipient                          |
 
 
 ### Parameters that control the service
 
-| Name          | Type     | Default value | Usage                           |
-|---------------|----------|---------------|---------------------------------------------|
+| Name              | Type     | Default value | Usage                                       |
+|-------------------|----------|---------------|---------------------------------------------|
 | **`PORT`**        | optional |        `8080` | The port on which the server should listen  |
 | **`HOST`**        | optional | `"127.0.0.1"` | The host on which the server should listen  |
-| **`ALLOWED_TO`**  | optional | the value of `EMAIL_TO` | All allowed recipients                      |
+| **`ALLOWED_TO`**  | optional | the value of `EMAIL_TO` | All allowed recipients            |
 | **`CORS_HEADER`** | optional |         `"*"` | The Access-Control-Allow-Origin CORS header |
 
 ### Parameters that control the admin panel 
@@ -100,9 +99,9 @@ services:
 
 * Original source code: [jlelse](https://about.jlelse.de) mainly for own purposes.
 * Contributors: 
-  * [glenux](https://glenux.net) made it ready for production at [boldcode.io](https://boldcode.io)
+  * [glenux](https://glenux.net) made it ready for production at [boldcode.io](https://boldcode.io). Current maintainer of the project.
 
 ## Licence
 
-This project is under the GNU GENERAL PUBLIC LICENCE version 3
+This project is under the GNU GENERAL PUBLIC LICENCE version 3.
 
