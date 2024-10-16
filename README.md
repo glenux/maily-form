@@ -108,11 +108,10 @@ volumes:
 
 Then run `docker compose up`.
 
-## Authors 
+## Contributors
 
-* Original source code: [jlelse](https://about.jlelse.de) mainly for own purposes.
-* Contributors: 
-  * [glenux](https://glenux.net) made it ready for production at [boldcode.io](https://boldcode.io). Current maintainer of the project.
+* [jlelse](https://about.jlelse.de) created the project mainly for his own purposes. **Original author**.
+* [glenux](https://glenux.net) made it ready for production at [boldcode.io](https://boldcode.io). **Current maintainer**.
 
 ## Licence
 
