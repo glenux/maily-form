@@ -1,9 +1,13 @@
+[![Build Status](https://cicd.apps.glenux.net/api/badges/glenux/maily-form/status.svg)](https://cicd.apps.glenux.net/glenux/maily-form)
+![License GPL3.0](https://img.shields.io/badge/license-GPL3.0-blue.svg)
+[![Donate on patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://patreon.com/glenux)
 
-# Maily Form 
+> :information_source: This project is available on our self-hosted server and
+> uses CodeBerg and GitHub as mirrors. For the latest updates and comprehensive
+> version of our project, please visit our primary repository at:
+> <https://code.apps.glenux.net/glenux/maily-form>.
 
-![Travis](https://travis-ci.org/jlelse/Maily-Form.svg?branch=master) ![Docker Pulls](https://img.shields.io/docker/pulls/jlelse/maily-form.svg)
-
-*Available on [DockerHub](https://hub.docker.com/r/jlelse/maily-form/)*
+# Maily Form
 
 This is a self-hosted service you can use to place forms on static sites. It uses [nodemailer](https://nodemailer.com/about/) and you can host it with Docker. 
 
@@ -76,7 +80,7 @@ Sample `docker-compose.yml` file for Maily Form:
 version: '3'
 services:
     forms:
-        image: jlelse/maily-form
+        image: glenux/maily-form
         container_name: forms
         restart: unless-stopped
         environment:
@@ -94,9 +98,9 @@ services:
 
 ## Authors 
 
-* Original source code [jlelse](https://about.jlelse.de) mainly for own purposes.
-* Contributors:
-    * [glenux](https://glenux.net) made it ready for production at [boldcode.io](https://boldcode.io)
+* Original source code: [jlelse](https://about.jlelse.de) mainly for own purposes.
+* Contributors: 
+  * [glenux](https://glenux.net) made it ready for production at [boldcode.io](https://boldcode.io)
 
 ## Licence
 
