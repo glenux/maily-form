@@ -55,6 +55,12 @@ If you want to use the admin panel at `/admin`, you have to set this too:
 | **`ADMIN_PASS`** | optional |                             - | Admin password |
 | **`ADMIN_REALM`**    | optional | `"Maily-Form Administration"` | Admin realm    |
 
+### Other parameters
+
+| Name          | Type     | Default value | Usage                           |
+|--------------------|----------|-------------------------------|----------------|
+| **`DATABASE_PATH`** | optional | /data/submissions.db | The path where the sqlite3 database will be located |
+
 ## Special form fields
 
 | Name              | Type     | Default value | Usage                           |
@@ -81,7 +87,10 @@ services:
   forms:
     image: glenux/maily-form
     restart: unless-stopped
+    volumes:
+      - forms_data:/data
     environment:
+      DATABASE_PATH: /data/submissions.db
       SMTP_USER: mail@example.com
       SMTP_PASS: yourSUPERsecretPASSWORD123
       SMTP_HOST: smtp.your-mail-provider.com
@@ -92,6 +101,9 @@ services:
       EMAIL_FROM: "Forms forms@example.com"
       ALLOWED_TO: "mail1@example.com,mail2@example.com"
       CORS_HEADER: "example.com"
+
+volumes:
+  forms_data:
 ```
 
 Then run `docker compose up`.
