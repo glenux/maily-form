@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'production') {
     // In production : read config from the environment or use default values
     config = {
         formName: 'anonymous',
-        database: 'data/submissions.db',
+        database: process.env.DATABASE_PATH || 'data/submissions.db',
 
         // Admin credentials to access the dashboard
         adminUsername: process.env.ADMIN_USER || null,
