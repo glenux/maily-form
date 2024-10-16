@@ -76,24 +76,25 @@ You can simply start a Docker container with the parameters listed above. You ca
 Sample `docker-compose.yml` file for Maily Form:
 
 ```
-version: '3'
+---
 services:
-    forms:
-        image: glenux/maily-form
-        container_name: forms
-        restart: unless-stopped
-        environment:
-            - SMTP_USER=mail@example.com
-            - SMTP_PASS=yourSUPERsecretPASSWORD123
-            - SMTP_HOST=smtp.your-mail-provider.com
-            - SMTP_PORT=587
-            - SMTP_SSL=true
-            - SMTP_AUTH=true
-            - EMAIL_TO=mail@example.com
-            - EMAIL_FROM="Forms forms@example.com"
-            - ALLOWED_TO="mail1@example.com,mail2@example.com"
-            - CORS_HEADER="example.com"
+  forms:
+    image: glenux/maily-form
+    restart: unless-stopped
+    environment:
+      SMTP_USER: mail@example.com
+      SMTP_PASS: yourSUPERsecretPASSWORD123
+      SMTP_HOST: smtp.your-mail-provider.com
+      SMTP_PORT: 587
+      SMTP_SSL: true
+      SMTP_AUTH: true
+      EMAIL_TO: mail@example.com
+      EMAIL_FROM: "Forms forms@example.com"
+      ALLOWED_TO: "mail1@example.com,mail2@example.com"
+      CORS_HEADER: "example.com"
 ```
+
+Then run `docker compose up`.
 
 ## Authors 
 
